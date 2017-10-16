@@ -3,10 +3,21 @@ package com.zyzhang.notepad;
 
 import org.litepal.crud.DataSupport;
 
-public class NoteBean extends DataSupport{
+import java.io.Serializable;
+
+public class NoteBean extends DataSupport implements Serializable {
     private int id;
     private String content;
     private String modifyTime;
+
+    public NoteBean(){
+
+    }
+
+    public NoteBean(int id,String content){
+        this.id = id;
+        this.content = content;
+    }
 
     public int getId() {
         return id;

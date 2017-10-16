@@ -89,8 +89,10 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         mrecyclerView.setLayoutManager(linearLayoutManager);
         notes = DataSupport.findAll(NoteBean.class);
-        noteAdapter = new NoteAdapter(notes);
+        noteAdapter = new NoteAdapter(getApplicationContext(),notes);
         mrecyclerView.setAdapter(noteAdapter);
+
+
     }
 
     private void initMenu(){
