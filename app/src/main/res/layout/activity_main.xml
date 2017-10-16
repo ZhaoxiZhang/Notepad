@@ -20,10 +20,10 @@
                 android:layout_height="wrap_content"
                 android:background="?attr/colorPrimary"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_scrollFlags="scroll|enterAlways|snap"/>
 
         </android.support.design.widget.AppBarLayout>
-
 
 
         <android.support.v7.widget.RecyclerView
@@ -42,13 +42,6 @@
 
     </android.support.design.widget.CoordinatorLayout>
 
-    <!--<TextView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_gravity="start"-->
-        <!--android:text="Notepad"-->
-        <!--android:textSize="30sp"-->
-        <!--android:background="#fff"/>-->
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"

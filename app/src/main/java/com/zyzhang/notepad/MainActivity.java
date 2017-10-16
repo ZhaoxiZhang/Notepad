@@ -24,7 +24,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private boolean isFirstStart = true;
     List<NoteBean>notes;
     private Toolbar mToolbar;
     private FloatingActionButton mFloatingActionButton;
@@ -40,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initToolbar();
-
         initMenu();
 
         mFloatingActionButton = (FloatingActionButton)findViewById(R.id.add_note);
@@ -52,13 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        
-        if (isFirstStart){
-            initData();
-            isFirstStart = false;
-            Log.d(TAG, "initData");
-        }
-        //initRecyclerView();
+
     }
 
     @Override
