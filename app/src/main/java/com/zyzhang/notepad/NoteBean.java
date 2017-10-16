@@ -1,7 +1,9 @@
 package com.zyzhang.notepad;
 
 
-public class NoteBean {
+import org.litepal.crud.DataSupport;
+
+public class NoteBean extends DataSupport{
     private int id;
     private String content;
     private String modifyTime;
